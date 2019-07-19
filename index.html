@@ -1,37 +1,81 @@
-<DOCTYPE! html>
-    <html>
-    <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    </head>
-    <body style="background-color:rgb(143, 145, 173);">
-        
-    <style> 
-       body {
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            font-size: 140%;
-            } 
-        p {
-            color: whitesmoke; 
-            text-align: center
-            }
-        
-        h1 {
-            text-align: center;
-            border:4px solid rgb(67, 69, 105);
-            color:whitesmoke;
-            font-size: 200%"
-            }
-        .haiku {
-            color: black; 
-            text-align: center
-            }
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
 
-        * {
+/*tabs styling*/
+
+    * {box-sizing: border-box}
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    
+    .tablink {
+      background-color: rgb(48, 44, 68);
+      color: white;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 30px 32px;
+      font-size: 28px;
+      width: 20%;
+    }
+    
+    .tablink:hover {
+      background-color: #3f385e;
+    }
+    
+    .tabcontent {
+      color: white;
+      display: none;
+      padding: 100px 20px;
+      height: 100%;
+    }
+    
+    #Home {background-color: black;}
+    #About {background-color: #455869;}
+    #Lifestyle {background-color: #506556;}
+    #Professional {background-color: #433653;}
+    #Connect {background-color: whitesmoke;}
+
+/* misc. styling*/
+
+    h1 {
+      text-align: center;
+      border:6px solid #433a53;
+      padding:1cm;
+      font-size: 250%;
+      color: whitesmoke;
+      background-color: #0a03183f;
+    }
+    .haiku {
+      color: whitesmoke; 
+      text-align: center;
+
+/*text over images*/
+    }
+    .container {
+      position: relative;                                  
+      color: white;
+    }
+    .bottom-centered {
+      position: absolute;
+      top: 80%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+/*Column styling*/
+    {
   box-sizing: border-box;
 }
+
 .column {
   float: left;
-  padding: 10px;
+  padding: 20px;
   height: 700px; 
 }
 
@@ -48,98 +92,120 @@
   display: table;
   clear: both;
 }
-        </style>
+    </style>
+    </head>
+    <body>
+    
+    <button class="tablink" onclick="openPage('Home', this, '#8a8aac')" id="defaultOpen">Home</button>
+    <button class="tablink" onclick="openPage('About', this, '#8a8aac')">About</button>
+    <button class="tablink" onclick="openPage('Lifestyle', this, '#8a8aac')">Lifestyle</button>
+    <button class="tablink" onclick="openPage('Professional',this, '#8a8aac')">Professional</button>
+    <button class="tablink" onclick="openPage('Connect', this, '#8a8aac')">Connect</button>
 
-    <h1>
-        SUPER C'S SUPER WEBSITE!
-    </h1>
+    
+    <div id="Home" class="tabcontent">
 
-    <p>&#127925;
-        The C learns HTML!
-    &#127925;</p>
-<div>
-    <center>
-        <img src="https://i.pinimg.com/originals/37/8d/78/378d786967e043bd93f5aeff4aaeded0.png" alt="Steven Universe Background Art
-    " width="1000">
-</center>
-</div>
-<div style="background-color: whitesmoke">
-    <h2 class="haiku">
-        <em> 
-            "A Try Haiku"
-        </em>
-    </h2>
-        <p class="haiku">
-            By Me
-        </p>
-        <p class="haiku">To learn something <em>new</em><br>
-        You must first learn to <em>try</em><br>
-        Then you will <em>succeed</em><p></p>
-</div>
-<div>
-    <center>
-    <img src="assets/images/bunny-and-background.gif">
-    </center>
-</div>
-<div>
-    <center>
-    <audio controls id="nature-sounds">
-        <source src="assets/audio/nature-sounds.mp3" type="audio/mp3">
-    </audio>
-    </center>
-</div>
-<h2>
-    <center>
-        A Little About C...
-    </center>   
-    </h2>
+        <div class="container">
+            <center><img src="assets/images/spiral-galaxy-steven-universe.png" alt="spiral-galaxy-steven-universe" width="1000"></center>
+            <div class="bottom-centered"><h1>SUPER C'S SUPER WEBSITE!</h1></div>
+          </div>
+        <div style="background-color: rgb(48, 44, 68)";>
+            <h2 class="haiku"><em> "A Try Haiku"</em></h2>
+                <p class="haiku"> By The C </p>
+                <p class="haiku">To learn something <em>new</em><br>
+                You must first learn to <em>try</em><br>
+                Then you will <em>succeed</em><p></p>
+          </div>
+    </div>
 
-<div class="row">
-  <div class="column left" style="background-color:#3f503f;">
-    <h2>List of Likes</h2>
-    <p>
-        <ul align="left"> 
-            <li>The T &lt;3</li>
-            <li>Cello</li>
-            <li>Rock Climbing</li>
-            <li>Bunnies</li>
-            <li>Family and Friends</li>
-            <li>The Great Outdoors</li>
-            <li>Water</li>
-            <li>Health and Fitness</li>
-            <li>Art and Animation</li>
-            <li>Entertainment and Media</li>
-            <li>Learning New Things</li> 
-            <li>Food and Cooking</li>
-            <li>Video Games</li>
-            <li>Tattoos</li>
-            <li>Cartoons</li>
-            <li>Crafting </li>
-        
-        </ul>
-    </p>
-  </div>
-  <div class="column middle" style="background-color: whitesmoke;">
-    <h2>Mini Bio!</h2>
-    <p>
+    <div id="About" class="tabcontent">
+        <div class="row">
+          <div class="column left" style="background-color:rgb(143, 155, 179);">
+            <h2>Some Goals I Have</h2>
+            <ul> 
+                <li>Lean how to program front end (UI/UX)</li>
+                <li>Learn the Schumann Cello Concerto in A minor</li>
+                <li>Climb V7/5.10+ consistently</li>
+                <li>Speak Korean fluently</li>
+                <li>Become a First Responder</li>
+                <li>Get my Rescue Diving certification</li>
+                <li>Stand on every continent</li>
+                <li>Go skydiving</li>
+                <li>Learn how to walk on my hands</li>
+                <li>Find sunken treasure</li>
+                <li>Learn about the flora in the Rocky Mountain region</li> 
+                <li>Reach my goal weight (130 lbs or less) by living a healthy lifestyle</li>
+                <li>Perform in "My Fair Lady", "Wicked" "The Last 5 Years" and "Phantom of the Opera"</li>
+            </ul>
+          </div>
+          <div class="column middle" style="background-color:rgb(44, 62, 85);">
+              <div class="container">
+                  <center><img src="assets/images/waterfall-steven-universe.jpg" alt="waterfall-steven-universe" width="1000"></center>
+                  <div class="bottom-centered"><h1>ABOUT ME</h1></div>
+                </div> 
+            
+          </div>
+          <div class="column right" style="background-color: rgb(143, 155, 179);">
+            <h2>Some Stuff I Dig</h2>
+            <ul> 
+                <li>The T &lt;3</li>
+                <li>Cello</li>
+                <li>Rock Climbing</li>
+                <li>Bunnies</li>
+                <li>Family and Friends</li>
+                <li>The Great Outdoors</li>
+                <li>Water</li>
+                <li>Health and Fitness</li>
+                <li>Art and Animation</li>
+                <li>Entertainment and Media</li>
+                <li>Learning New Things</li> 
+                <li>Food and Cooking</li>
+                <li>Video Games</li>
+                <li>Space</li>
+                <li>Tattoos</li>
+                <li>Cartoons</li>
+                <li>Crafting </li> 
+            </ul>
+          </div>
+        </div>
+    </div> 
 
-    </p>
-  </div>
-  <div class="column right" style="background-color:#3f503f;">
-    <h2>List of Goals</h2>
-    <p>
-        <ul>
-            <li>Learn how to Program Front end (UI/UX)
-            <li>Climb V7/5.10+ consistently</li>
-            <li>Become a First Responder</li>
-            <li>Get my Rescue Diving certification</li>
-            <li>Stand Every Continent</li>
-            <li>Learn how to walk on my hands</li>
-            <li>Reach my goal weight (130 lbs) by living a healthy lifestyle</li>
-        </ul>
-    </p>
-  </div>
-</div>
- 
-</body>
+    <div id="Lifestyle" class="tabcontent">
+        <div class="container">
+            <center><img src="assets/images/forest-steven-universe.jpg" alt="forest-steven-universe" width="1000"></center>
+            <div class="bottom-centered"><h1>A DAY IN THE LIFE...</h1>
+          </div>
+        </div>
+      <h3>Life</h3>
+      <p>A day in the life of C - to be filled with climb videos and fun photos!</p> 
+    </div>
+    
+    <div id="Professional" class="tabcontent">
+      <h3>Resume, and link to cello website</h3>
+      <p>To be filled with professional nonsense.</p>
+    </div>
+    
+    <div id="Connect" class="tabcontent">
+      <h3>Connect</h3>
+      <p>Connect with me on social media! Im gonna build links to all my social stuff!</p>
+    </div>
+    
+    <script>
+    function openPage(pageName,elmnt,color) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+      }
+      document.getElementById(pageName).style.display = "block";
+      elmnt.style.backgroundColor = color;
+    }
+    
+    document.getElementById("defaultOpen").click();
+    </script>
+    </body>
 </html>
